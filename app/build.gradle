@@ -80,3 +80,13 @@ dependencies {
     implementation "org.koin:koin-androidx-ext:$koin_version"
 
 }
+if (project.hasProperty('kapt')) {
+    // Reference for 'kapt' DSL: https://kotlinlang.org/docs/reference/kapt.html#java-compiler-options
+    kapt {
+        // we expect this closure to run over a org.jetbrains.kotlin.gradle.plugin.KaptExtension
+        javacOptions {
+            option("-source", "8")
+            option("-target", "8")
+        }
+    }
+}

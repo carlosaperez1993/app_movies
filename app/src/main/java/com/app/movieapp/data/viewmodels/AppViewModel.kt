@@ -12,7 +12,8 @@ import com.app.movieapp.models.Movie
 import com.app.movieapp.viewState.FavoriteMoviesViewState
 import io.reactivex.schedulers.Schedulers
 import kotlinx.coroutines.*
-
+/*
+* Esta clase maneja  lo que tiene que ver con data en la aplicacion.*/
 class AppViewModel (private val moviesRepository : MoviesRepository) : ViewModel(){
 
     var viewState : MutableLiveData<MainViewState> = MutableLiveData()
